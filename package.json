@@ -1,0 +1,6 @@
+{
+  "name": "pokemon-chooser",
+  "dependencies": {
+    "vue": "^1.0.26"
+  }
+}
