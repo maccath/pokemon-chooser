@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Slim 3</title>
+        <title>Pokemon Chooser</title>
         <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
         <style>
             body {
@@ -24,15 +24,13 @@
                 margin-bottom: 0;
             }
         </style>
+        <script src="/js/vue/vue.js"></script>
     </head>
     <body>
-        <h1>Slim</h1>
-        <div>a microframework for PHP</div>
+        <h1>Pokemon Chooser</h1>
 
-        <?php if (isset($name)) : ?>
-            <h2>Hello <?= htmlspecialchars($name); ?>!</h2>
-        <?php else: ?>
-            <p>Try <a href="http://www.slimframework.com">SlimFramework</a>
-        <?php endif; ?>
+        <div id="app">{{ message }}</div>
+
+        <script src="/js/app.js"></script>
     </body>
 </html>
