@@ -2,5 +2,8 @@
   "name": "pokemon-chooser",
   "dependencies": {
     "vue": "^1.0.26"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }
