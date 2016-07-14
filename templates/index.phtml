@@ -4,34 +4,21 @@
         <meta charset="utf-8"/>
         <title>Pokemon Chooser</title>
         <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-        <style>
-            body {
-                margin: 50px 0 0 0;
-                padding: 0;
-                width: 100%;
-                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-                text-align: center;
-                color: #aaa;
-                font-size: 18px;
-            }
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-            h1 {
-                color: #719e40;
-                letter-spacing: -3px;
-                font-family: 'Lato', sans-serif;
-                font-size: 100px;
-                font-weight: 200;
-                margin-bottom: 0;
-            }
-        </style>
         <script src="/js/vue/vue.js"></script>
         <script src="/js/vue-resource/vue-resource.js"></script>
         <script src="/js/vue-strap/vue-strap.js"></script>
     </head>
     <body>
-        <h1>Pokemon Chooser</h1>
 
-        <div id="app">{{ message }}</div>
+        <div class="container" id="app">
+            <div class="page-header">
+                <h1>Pokemon Chooser <small>{{ message }}</small></h1>
+            </div>
+
+        </div>
 
         <script src="/js/app.js"></script>
     </body>
