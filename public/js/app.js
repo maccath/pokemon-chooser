@@ -13,10 +13,10 @@ var app = new Vue({
             });
         },
         loadType: function (type) {
-            if (type.url) {
+            if ( ! type.loaded) {
                 this.$http.get(type.url).then(function (response) {
                     var index = this.types.indexOf(type);
-                    type = Object.assign({}, this.types[index], response.data);
+                    type = Object.assign({'loaded' : true}, this.types[index], response.data);
                     this.types.$set(index, type);
                 });
             }
