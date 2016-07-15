@@ -11,6 +11,15 @@ var app = new Vue({
             }, function (response) {
                 // Todo: handle an error
             });
+        },
+        loadType: function (type) {
+            if (type.url) {
+                this.$http.get(type.url).then(function (response) {
+                    var index = this.types.indexOf(type);
+                    type = Object.assign({}, this.types[index], response.data);
+                    this.types.$set(index, type);
+                });
+            }
         }
     }
 });
