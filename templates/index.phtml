@@ -19,7 +19,9 @@
             </div>
 
             <div class="list-group">
-                <a href="#" class="list-group-item" v-for="type in types">{{ type.name }}</a>
+                <a href="#" class="list-group-item" v-for="type in types">
+                    <h4 class="list-group-item-heading" v-on:click="loadType(type)">{{ type.name }}</h4>
+                </a>
             </div>
         </div>
 
