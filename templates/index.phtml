@@ -18,11 +18,44 @@
                 <h1>Pokemon Chooser <small>{{ message }}</small></h1>
             </div>
 
-            <div class="list-group">
-                <a href="#" class="list-group-item" v-for="type in types">
-                    <h4 class="list-group-item-heading" v-on:click="loadType(type)">{{ type.name }}</h4>
-                </a>
-            </div>
+            <accordion>
+                <panel v-bind:header="type.name" v-on:click="loadType(type)" v-for="type in types" :is-open.sync="type.open">
+                    <div class="row" v-if="type.damage_relations">
+                        <div class="col-sm-4">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">Weak To</div>
+                                <ul class="list-group">
+                                    <li class="list-group-item" v-for="effective in type.damage_relations.double_damage_from">
+                                        {{ effective.name }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="panel panel-warning">
+                                <div class="panel-heading">Resistant To</div>
+                                <ul class="list-group">
+                                    <li class="list-group-item" v-for="ineffective in type.damage_relations.half_damage_from">
+                                        {{ ineffective.name }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="panel panel-danger">
+                                <div class="panel-heading">Immune To</div>
+                                <ul class="list-group">
+                                    <li class="list-group-item" v-for="immune in type.damage_relations.no_damage_from">
+                                        {{ immune.name }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </panel>
+            </accordion>
         </div>
 
         <script src="/js/app.js"></script>
