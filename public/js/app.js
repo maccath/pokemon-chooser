@@ -4,6 +4,10 @@ var app = new Vue({
         message: 'Gotta Catch \'Em All!',
         types: []
     },
+    components: {
+        'accordion': VueStrap.accordion,
+        'panel': VueStrap.panel
+    },
     methods: {
         getTypes: function () {
             this.$http.get('http://pokeapi.co/api/v2/type/').then(function (response) {
