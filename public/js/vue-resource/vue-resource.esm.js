@@ -4,8 +4,6 @@
  * Released under the MIT License.
  */
 
-'use strict';
-
 /**
  * Promises/A+ polyfill v1.1.4 (https://github.com/bramstein/promis)
  */
@@ -1465,4 +1463,5 @@ if (typeof window !== 'undefined' && window.Vue && !window.Vue.resource) {
   window.Vue.use(plugin);
 }
 
-module.exports = plugin;
+export default plugin;
+export { Url, Http, Resource };
