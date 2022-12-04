@@ -10,7 +10,7 @@ var app = new Vue({
     },
     methods: {
         getTypes: function () {
-            this.$http.get('http://pokeapi.co/api/v2/type/').then(function (response) {
+            this.$http.get('https://pokeapi.co/api/v2/type/').then(function (response) {
                 this.types = response.data.results;
             }, function (response) {
                 // Todo: handle an error
